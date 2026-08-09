@@ -5,3 +5,13 @@ description = "My solutions to LeetCode problems in Python"
 readme = "README.md"
 requires-python = ">=3.14"
 dependencies = []
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+]
+
+[tool.pytest.ini_options]
+pythonpath = [
+    "src"
+]
