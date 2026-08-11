@@ -5,15 +5,16 @@ class Solution:
         if x < 0:
             return False
 
-        div = 10**(len(str(x)) - 1)
+        x: str = str(x)
 
-        while x:
-            left = x // div
-            right = x % 10
+        length: int = len(str(x))
+        l_ptr = 0
+        r_ptr = length - 1
 
-            if left != right:
+        while l_ptr < r_ptr:
+            if x[l_ptr] != x[r_ptr]:
                 return False
-            x = (x % div) // 10
-            div /= 100
+            l_ptr += 1
+            r_ptr -= 1
 
         return True
