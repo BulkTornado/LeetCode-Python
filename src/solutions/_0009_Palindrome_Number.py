@@ -5,12 +5,15 @@ class Solution:
         if x < 0:
             return False
 
-        num_list_rev = []
+        div = 10**(len(str(x)) - 1)
 
         while x:
-            digit = x % 10
-            num_list_rev.append(digit)
+            left = x // div
+            right = x % 10
 
-            x = x // 10
+            if left != right:
+                return False
+            x = (x % div) // 10
+            div /= 100
 
-        return num_list_rev == num_list_rev[::-1]
+        return True
