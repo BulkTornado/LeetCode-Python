@@ -25,6 +25,20 @@ def test_reverse_integer_3():
 
 def test_reverse_integer_4():
     x = 1534236469
+    expected_result = 0 # 9646324351
+    result = solution.reverse(x)
+
+    assert result == expected_result
+
+def test_reverse_integer_5():
+    x = 0
+    expected_result = 0
+    result = solution.reverse(x)
+
+    assert result == expected_result
+
+def test_reverse_integer_6():
+    x = 1563847412
     expected_result = 0
     result = solution.reverse(x)
 
