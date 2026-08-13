@@ -7,9 +7,8 @@ class Solution:
 
         x: str = str(x)
 
-        length: int = len(str(x))
         l_ptr = 0
-        r_ptr = length - 1
+        r_ptr = len(x) - 1
 
         while l_ptr < r_ptr:
             if x[l_ptr] != x[r_ptr]:
